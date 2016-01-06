@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "frogsui",
   "private": true,
-  "version": "0.0.3",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.2.0",
+  "description": "Sample project for demonstrating npm/bower build pipeline",
+  "repository": "http://gitlab.inc.jfrog.local/Alexist/frogs-ui.git",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.1",

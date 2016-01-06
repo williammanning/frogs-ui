@@ -1,6 +1,6 @@
 {
   "name": "frogsui",
-  "private": true,
+  "private": false,
   "version": "0.2.0",
   "description": "Sample project for demonstrating npm/bower build pipeline",
   "repository": "http://gitlab.inc.jfrog.local/Alexist/frogs-ui.git",
@@ -15,7 +15,8 @@
     "karma-jasmine": "^0.3.5",
     "karma-junit-reporter": "^0.2.2",
     "protractor": "^2.1.0",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.2.6",
+    "bower-art-resolver": ">=2.0.5"
   },
   "scripts": {
     "postinstall": "bower install",

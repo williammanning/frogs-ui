@@ -1,7 +1,7 @@
 {
   "name": "frogsui",
   "private": false,
-  "version": "0.2.1-0",
+  "version": "0.2.1-1",
   "description": "Sample project for demonstrating npm/bower build pipeline",
   "repository": "http://gitlab.inc.jfrog.local/Alexist/frogs-ui.git",
   "license": "MIT",

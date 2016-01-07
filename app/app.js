@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('frogs', ['ngAnimate', 'ui.bootstrap'])
+        .constant('wsUrl', 'http://localhost:9000/frogs')
         .factory('frogsService', frogsService)
         .controller('FrogsController', FrogsController);
 
@@ -13,8 +14,8 @@
         });
     }
 
-    frogsService.$inject = ['$http'];
-    function frogsService($http) {
+    frogsService.$inject = ['$http', 'wsUrl'];
+    function frogsService($http, wsUrl) {
 
         return {
 
@@ -22,7 +23,7 @@
 
                 var req = {
                     method: 'GET',
-                    url: 'http://localhost:9000/frogs',
+                    url: wsUrl,
                     headers: {
                         'Content-Type': 'application/json'
                     }

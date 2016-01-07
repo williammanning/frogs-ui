@@ -29,17 +29,10 @@
 </header>
 
 <div class="container" ng-controller="FrogsController as vm">
-    <!--<ul class="frogs">-->
-        <!--<li ng-repeat="frog in vm.frogs">-->
-            <!--<img src="http://localhost:9000/{{::frog.imageUrl}}" width="400"/>-->
-            <!--<h3>{{::frog.name}}</h3>-->
-            <!--<blockquote>{{::frog.quote}}</blockquote>-->
-        <!--</li>-->
-    <!--</ul>-->
 
     <uib-carousel  no-wrap="noWrapSlides">
         <uib-slide ng-repeat="frog in vm.frogs" active="frog.active">
-            <img ng-src="http://localhost:9000/{{::frog.imageUrl}}" style="margin:auto;">
+            <img ng-src="{{vm.wsBaseUrl}}/{{::frog.imageUrl}}" style="margin:auto;">
             <div class="carousel-caption">
                 <h4>{{::frog.name}} ({{::frog.year}})</h4>
                 <p>{{::frog.quote}}</p>

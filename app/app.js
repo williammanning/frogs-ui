@@ -1,15 +1,16 @@
 (function () {
     'use strict';
 
-    angular.module('frogs', ['ngAnimate', 'ui.bootstrap'])
+    angular.module('frogs', ['ngAnimate', 'ui.bootstrap', 'uiVersion'])
         .constant('wsBaseUrl', 'http://localhost:9000/')
         .factory('frogsService', frogsService)
         .controller('FrogsController', FrogsController);
 
-    FrogsController.$inject = ['frogsService', 'wsBaseUrl'];
-    function FrogsController(frogsService, wsBaseUrl) {
+    FrogsController.$inject = ['frogsService', 'wsBaseUrl', 'version'];
+    function FrogsController(frogsService, wsBaseUrl, version) {
         var vm = this;
         vm.wsBaseUrl = wsBaseUrl;
+        vm.uiVersion = version;
         frogsService.getFrogs().then(function (result) {
             vm.frogs = result.data
         });

@@ -19,6 +19,7 @@
     "bower-art-resolver": ">=2.0.5"
   },
   "scripts": {
+    "preinstall" : "node -e \"require('shelljs/global'); sed('-i', 'DEV_VERSION', '$npm_package_version', 'app/components/version/version.js');\"",
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1",
